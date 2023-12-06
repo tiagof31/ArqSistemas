@@ -57,13 +57,13 @@ async function convertCurrency() {
     });
 
     try {
-        const response = await axios.post(`${exchangeServiceUrl}/convert`, {
+        const response = await axios.post(`${walletServiceUrl}/convert`, {
             fromCurrency,
             toCurrency,
             amount: parseFloat(amount)
         });
 
-        console.log(`Conversão realizada: ${amount} ${fromCurrency} = ${response.data.convertedAmount} ${toCurrency}`);
+        console.log("Conversão realizada, verifique sua carteira.");
     } catch (error) {
         console.error('Erro na conversão:', error.message);
     }

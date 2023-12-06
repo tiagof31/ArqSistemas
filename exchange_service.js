@@ -20,7 +20,7 @@ app.post('/convert', async (req, res) => {
             convertedAmount,
             conversionRate
     });
-    res.json({ convertedAmount, conversionRate });
+    res.json({ convertedAmount });
 });
 
 function adjustExchangeRates(wallet, fromCurrency, toCurrency) {
